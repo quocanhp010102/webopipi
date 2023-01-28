@@ -1,0 +1,253 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+img{
+    
+}
+html{
+    font-family: Arial, Helvetica, sans-serif;
+}
+li{
+    list-style: none;
+}
+a{
+    color: #000;
+    text-decoration: none;
+}
+.nd85{
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+}
+#main{
+   
+}
+#header{
+    line-height: 100px;
+    display: flex;
+    justify-content: space-between;
+    
+}
+.header__img{
+    margin-left: 30px;
+    width: 20%;
+}
+.header__nav{
+    width: 75%;
+}
+.nav {
+    margin-right: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+.nav>li{
+    position: relative;
+}
+.nav>li:hover .gachchan{
+    display: block;
+}
+.gachchan{
+    display: none;
+    background-color: aqua;
+    top:80px;
+    width: 50px;
+    height: 2px;
+    position: absolute;
+    animation: gachbo ease .8s;
+}
+
+.subnav{
+    line-height: 40px;
+    position: absolute;
+    top: 100px;
+   box-shadow: 2px 2px 2px 2px #ccc;
+    display:none ;
+    width: 150px;
+    transform: translateY(200px);
+}
+.nav>li:hover >.subnav{
+    display: block;
+   animation: subnav ease .8s;
+}
+.subnav >li a{
+    display: block;
+    padding: 0 10px;
+}
+.subnav >li:hover a{
+    color: rgb(236, 30, 99);
+}
+.buttongoc{
+    top: 0;
+    right: 0;
+    width: 100px;
+    height: 45px;
+    position: relative;
+    display: inline-block;
+    border: 1px solid rgb(235, 69, 97);
+    border-radius: 30px;
+    padding: 10px;
+    
+    
+}
+.buttongoc .maund{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+   top: 0;
+   right: 0;
+    z-index: 1000000;
+    padding: 10px;
+    border-radius: 30px;
+}
+.buttongoc:hover p{
+    /* display: none; */
+    color: #fff;
+    transition: .8s;
+}
+.buttongoc p{
+    color:rgb(209, 50, 143);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.buttongoc:hover .mau{
+   
+    transform: rotateY(180deg);
+    transition: 0.8s;
+}
+.mau{
+    top: -1px;
+    right: 0px;
+    left: 0px;
+    bottom: 0px;
+    transform: rotateY(90deg);
+    position: absolute;
+    width: 100%;
+    height: 107%;
+    padding: 10px;
+    background: linear-gradient(to bottom, #FF552E 0%, #FF2980 100%);
+    border-radius: 30px;
+   transition: 0.8s;
+}
+.slider__nd>p{
+     margin: 20px 0;
+     color: rgb(158, 153, 153);
+}
+.buttongoc.slide >.mau{
+    border-radius: 0;
+}
+.buttongoc.slide1 >.mau{
+    transform: rotateY(0deg);
+    border-radius: 0;
+}
+.buttongoc.slide1 p{
+    color: #fff;
+}
+.buttongoc.slide1:hover p{
+    color: rgb(209, 50, 143);
+}
+.buttongoc.slide1:hover .mau{
+    transform: rotateY(90deg);
+}
+.buttongoc.slide1{
+   border-radius: 0;
+    width: 200px;
+    margin-right:20px;
+}
+
+.buttongoc.slide1 .maund{
+    display: flex;
+    justify-content: center;
+}
+.buttongoc.slide2{
+border-radius: 0;
+}
+.buttongoc.slide2 .mau{
+    border-radius: 0;
+}
+.siderr{
+    display: flex;
+}
+#slider h1{
+    font-size: 45px;
+    line-height: 1.6;
+}
+#slider p{
+    line-height: 1.5;
+}
+.slider__nd{
+    width: 45%;
+}
+.slider__img{
+    width: 50%;
+}
+.content__nd{
+    overflow: hidden;
+}
+.ndxoay{
+    position: relative;
+    display: flex;
+    
+    transition: .5s;
+    
+} 
+.arrow.l{
+    z-index: 1000;
+    position: relative;
+    top:50%;
+    left: 0;
+}
+.arrow.r{
+    z-index: 1000;
+    position: relative;
+    top:50%;
+    right: 0;
+}
+#content{
+    margin-top: 30px;
+}
+#content h2{
+    line-height: 1.6;
+}
+#content p{
+    line-height: 1.5;
+}
+#content i{
+    font-size: 30px;
+}
+.content__ndc{
+    position: relative;
+    padding: 10px;
+    box-shadow: 2px 2px 2px 2px #ccc;
+    margin: 0 12px;
+    width: 31%;
+    flex-shrink: 0;
+    transition: .6s;
+}
+.content__ndc:hover{
+    transition: .8s;
+    background: linear-gradient(to bottom,#FF5926 0%,#FF2880 100%);
+    color: #fff;
+}
+@keyframes subnav{
+    0%{
+        opacity: 0;
+        display: none;
+        transform: translateY(50px);
+    }
+    100%{
+        opacity: 1;
+        display: block;
+        transform: translateY(0);
+    }
+}
+@keyframes gachbo{
+    0%{
+        width: 0;
+    }
+    100%{
+        width: 50px;
+    }
+}
